@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Learning Hub - Nabuasecondary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Learning Hub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#subjects" class="nav-link">Subjects</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Educational Learning Hub</h1>
+            <p>Empowering students with quality education and resources for success</p>
+            <button class="btn btn-primary" onclick="document.getElementById('subjects').scrollIntoView({behavior: 'smooth'})">Explore Subjects</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our Learning Hub</h2>
+            <p>Nabuasecondary Educational Learning Hub is a comprehensive online platform dedicated to providing students with high-quality educational resources and support. Our mission is to enhance learning outcomes by offering well-structured courses, interactive materials, and expert guidance across key academic subjects.</p>
+            <p>We believe that education is the foundation for a successful future. Our platform is designed to make learning accessible, engaging, and effective for all students. Whether you're preparing for exams, seeking to deepen your understanding of a subject, or looking for additional learning support, our hub provides everything you need.</p>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from experienced educators with years of teaching experience</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Rich Content</h3>
+                    <p>Comprehensive study materials covering all key topics</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Interactive Learning</h3>
+                    <p>Engage with interactive tools and simulations</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certifications</h3>
+                    <p>Earn recognized credentials and track your progress</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects">
+        <div class="container">
+            <h2>Our Subjects</h2>
+            <p class="section-intro">Click on any subject below to learn more about what we offer</p>
+            <div class="subjects-grid">
+                <!-- Mathematics Card -->
+                <div class="subject-card" onclick="openSubjectModal('math')">
+                    <div class="subject-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>MATHEMATICS</h3>
+                    <p>Master fundamental and advanced mathematical concepts</p>
+                    <span class="learn-more">Click to learn more →</span>
+                </div>
+
+                <!-- English Card -->
+                <div class="subject-card" onclick="openSubjectModal('english')">
+                    <div class="subject-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>ENGLISH</h3>
+                    <p>Develop language skills and communication abilities</p>
+                    <span class="learn-more">Click to learn more →</span>
+                </div>
+
+                <!-- Computer Studies Card -->
+                <div class="subject-card" onclick="openSubjectModal('computer')">
+                    <div class="subject-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>COMPUTER STUDIES</h3>
+                    <p>Explore programming, networking, and IT fundamentals</p>
+                    <span class="learn-more">Click to learn more →</span>
+                </div>
+
+                <!-- Accounting Card -->
+                <div class="subject-card" onclick="openSubjectModal('accounting')">
+                    <div class="subject-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>ACCOUNTING</h3>
+                    <p>Learn financial management and business accounting principles</p>
+                    <span class="learn-more">Click to learn more →</span>
+                </div>
+
+                <!-- Economics Card -->
+                <div class="subject-card" onclick="openSubjectModal('economics')">
+                    <div class="subject-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>ECONOMICS</h3>
+                    <p>Understand economic systems and principles of business</p>
+                    <span class="learn-more">Click to learn more →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject Details Modal -->
+    <div id="subjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSubjectModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Study Guides</h3>
+                    <p>Downloadable PDF study materials and notes for each subject</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Tutorials</h3>
+                    <p>Visual learning through comprehensive video lessons</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Practice Tests</h3>
+                    <p>Evaluate your knowledge with our practice tests and quizzes</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-comments"></i>
+                    <h3>Discussion Forum</h3>
+                    <p>Connect with other learners and ask questions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Nabuasecondary Educational Learning Hub - Providing quality education and comprehensive learning resources to students. We are committed to academic excellence and student success.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#subjects">Subjects</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+679 338 3231</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mead Road, Nabua, Suva, Fiji</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:nabuasecondary@yahoo.com">nabuasecondary@yahoo.com</a></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Mailing Address</h3>
+                <p>P.O.BOX 782<br>Nabua, Fiji</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nabuasecondary Educational Learning Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
